@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="minhducck"/>
+    <meta charset="utf-8" />
+
+	<title>Login</title>
+    
+    <!--Jquery-->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    
+    <!--Bootstrap-->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    
+    <!--Custom Style-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+    <script>
+        function checkLogin(param){
+            flag = true;
+            if(param.username.value == '')
+            {
+                $(param.username).parent().addClass('has-error');
+                flag = false;
+            }
+            
+            if(param.password.value == '')
+            {
+                $(param.password).parent().addClass('has-error');
+                flag = false;
+            }
+            
+            return flag;
+        }
+        
+        $(document).ready(function(){
+            $('#username').keypress(function(){
+                $(this).parent().removeClass('has-error');
+            });
+            $('#password').keypress(function(){
+                $(this).parent().removeClass('has-error');
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <form role="form" action="" method="POST" onsubmit="return checkLogin(this)" class="login-form">
+            <fieldset>
+                <legend>ĐĂNG NHẬP</legend>
+                <blockquote class="bg-warning">
+                    <ul class="errors">
+                        <li class="text-warning">Bạn chưa điền tên đăng nhập.</li>
+                        <li class="text-warning">Bạn chưa điền mật khẩu.</li>
+                    </ul>
+                </blockquote>
+                <div class="form-group">
+                    <label for="username"><span class="glyphicon glyphicon-user"></span> Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Username" />
+                </div>
+                <div class="form-group">
+                    <label for="password"><span class="glyphicon glyphicon-lock"></span> Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password"/>
+                </div>
+                
+                <button type="submit" class="btn btn-success">Login</button>
+                <button type="reset" class="btn btn-default">Reset</button>
+            </fieldset>
+            <hr />
+            <section class="text-right">
+                Created by minhducck &amp; KingBm
+            </section>
+        </form>
+    </div>
+</body>
+</html>

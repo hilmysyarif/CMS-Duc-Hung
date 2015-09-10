@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="minhducck"/>
+    <meta charset="utf-8" />
+
+	<title>Login</title>
+    
+    <!--Jquery-->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    
+    <!--Bootstrap-->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    
+    <!--Custom Style-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script>
+        $(document).ready(function(){
+            $("#menu-toggle").click(function(e) {
+                    e.preventDefault();
+                    $("#wrapper").toggleClass("active");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="" id="wrapper">
+    
+    <!-- Sidebar -->
+    <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav" id="sidebar_menu">
+                <li class="sidebar-brand"><a href="#" id="menu-toggle">Menu<span class="glyphicon glyphicon-align-justify" id="main_icon"></span></a></li>
+            </ul>
+            <ul id="sidebar" class="sidebar-nav">
+                <li>
+                    <a href="config.html">Cấu Hình<span class="sub_icon glyphicon glyphicon-cog"></span></a>
+                </li>
+                <li>
+                    <a href="user.html">Tài Khoản<span class="sub_icon glyphicon glyphicon-user"></span></a>
+                    <ul>
+                        <li><a href="groupuser">Nhóm người dùng</a></li>
+                        <li><a href="groupuser">Người sử dụng</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="category.html">Sản phẩm<span class="sub_icon glyphicon glyphicon-shopping-cart"></span></a>
+                    <ul>
+                        <li><a href="cateogry">Danh Mục</a></li>
+                        <li><a href="groupuser">Sản Phẩm</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="category.html">Liên Hệ<span class="sub_icon glyphicon glyphicon glyphicon-phone-alt"></span></a></li>
+            </ul>
+        </div>
+    
+    <!-- Page content -->
+        <div id="page-content-wrapper">
+        <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="backend-navbar">
+                            <li><a href="logout">Đăng Xuất <span class="glyphicon glyphicon-log-out"></span></a></li>
+                            <li><a href="info">Thông tin tài khoản <span class="glyphicon glyphicon-info-sign"></span></a></li>
+                            <li>Xin Chào, <strong>Administrator</strong></li>
+                        </ul>
+                        
+                        <div class="clearfix"></div>
+                        <hr />
+                        <div class="">
+                            sáoduij
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+</body>
+</html>

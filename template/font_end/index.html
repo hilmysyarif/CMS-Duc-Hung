@@ -1,0 +1,375 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="minhducck" />
+    <meta charset="utf-8" />
+    <base href="http://shoponline.local" />
+	<title>Title Site</title>
+    
+    <!--Jquery-->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!--Owl.Carousel-->
+    <script src="js/owl/owl.carousel.js"></script>
+    <link rel="stylesheet" href="js/owl/assets/owl.carousel.css"/>
+    
+    <script>
+        
+
+    $(document).ready(function() {
+     
+        var owl = $(".owl-carousel").owlCarousel({
+            autoWidth : true,
+            autoplay : true,
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            singleItem:true,
+            margin : 20,
+            loop : true
+        });
+        
+        nav_pos =  $('#navigation').position();
+        nav_top_val = nav_pos.top;
+        
+        $(document).scroll(function(){
+            
+            var screenTop = $(document).scrollTop();
+            
+            if(screenTop > nav_top_val){
+                $('#navigation').css('position', 'fixed');
+                $('#navigation').css('z-index', '200');
+                $('#navigation').css('top', '0');
+                $('#navigation').css('width', $('.header').width());
+            }else{
+                $('#navigation').css('position', 'block');
+                $('#navigation').css('width', 'auto');
+            }
+        })
+    });
+
+
+    </script>
+    
+    <!--Custom Style-->
+    <link rel="stylesheet" type="text/css" href="css/front_end/style.css" />
+</head>
+
+<body>
+<!--Header-->
+<div class="container">
+    <div class="header">
+        <div class="home-header-home">
+            <div class="col-md-4 clearfix text-left"></div>
+            
+            <div class="col-md-4 clearfix text-center"><a href="#"><h1 class="header-logo"><span style="color: #fd614e;">MINHDUCCK's</span> STORE</h1></a></div>
+            
+            <div class="col-md-4 clearfix text-right">
+                <div id="cart-box" class="#CART"><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart (0)</a></div>
+            </div>
+        </div>
+        
+        <div class="clearfix"></div>
+        
+        <nav id="navigation">
+                <div class="left-nav">
+                    <ul class="main-navbar">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li class="nav-normal">
+                            <a href="#">Category X <span class="badge">30</span><span class="caret"></span></a>
+                            <ul class="navbar-items">
+                                <li><a href="#">Category X-1</a></li>
+                                <li><a href="#">Category X-2</a></li>
+                                <li><a href="#">Category X-3</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-mega">
+                            <a href="#">Category X <span class="badge">50</span><span class="caret"></span></a>
+                            <div class="nav-mega-item">
+                                Hello
+                                <br /><br /> lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla nisl id nulla varius placerat ac eu diam. Fusce ornare mi ut elit rhoncus tincidunt. Suspendisse semper, orci at convallis luctus, sem ex mattis sapien, sed lobortis elit quam sit amet turpis. Sed sit amet orci et ipsum placerat cursus. Vivamus quis mi porttitor, commodo lectus non, vulputate dui. Praesent porta aliquam dui, sed porta est tempor ut. Morbi lobortis, mi ac convallis imperdiet, eros nibh viverra dui, mollis dapibus turpis
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="right-nav text-right">
+                    <a class="search-bx" href="#" onclick="return false"><span class="glyphicon glyphicon-search"></span>
+                        <div class="header-search">
+                            <form method="get" action="http://demo.mythemeshop.com/emaxstore" class="search-form ajax-search">
+                    			<input type="search" autocomplete="off" placeholder="Search..." name="s"/>
+                    		</form>
+                        </div>
+                    </a>
+                </div>
+        </nav>
+    </div>
+</div>
+<!--/Header-->
+
+<!--Breadcrumb-->
+<div class="container">    
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li class="active">Data</li>
+    </ol>
+</div>
+<!--/Breadcrumb-->
+
+<!--Start Main Content-->
+<div class="main-content">
+    <div class="container">
+        <!--Featured Product-->
+        <div class="featured-product">
+            <h1 class="featured-product-heading">
+                <span>Featured Products</span>
+            </h1>
+        </div>
+        
+        
+        <!--Carousel-->
+        <div style="height: 402px!important;">
+            <div class="owl-carousel" style="padding: 0; height:402">
+                <div class="item clearfix">
+                    <div class="featured-item">
+                        <a href="#">
+                            <img class="featured-product-img" alt="Hang Hot" title="Hang kinh" src="images/Lobster_Print_Kitten_Clutch-530x402.jpg"/>
+                        </a>
+                        
+                        <div class="featured-product-info">
+                            <h3 class="featured-product-title"><a href="#">Product TITLE</a></h3>
+                            <div class="featured-product-data col-md-12">
+                                <div class="col-sm-6">
+                                    <h3 class="featured-product-price">$ 250</h3>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <a href="#" class="featured-product-cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item clearfix">
+                    <div class="featured-item">
+                        <a href="#">
+                            <img class="featured-product-img" alt="Hang Hot" title="Hang kinh" src="images/Sail_on_Beach_Backpack-254x402.jpg"/>
+                        </a>
+                        
+                        <div class="col-md-12 featured-product-info">
+                            <h3 class="featured-product-title"><a href="#">Product TITLE</a></h3>
+                            <div class="featured-product-data col-md-12">
+                                <div class="col-sm-6">
+                                    <h3 class="featured-product-price">$ 250</h3>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <a href="#" class="featured-product-cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="on-sale-ribbon">Sale</div>
+                    </div>
+                </div>
+                
+                <div class="item clearfix">
+                    <div class="featured-item">
+                        <a href="#">
+                            <img class="featured-product-img" alt="Hang Hot" title="Hang kinh" src="images/Sail_on_Beach_Backpack-254x402.jpg"/>
+                        </a>
+                        
+                        <div class="col-md-12 featured-product-info">
+                            <h3 class="featured-product-title"><a href="#">Product TITLE</a></h3>
+                            <div class="featured-product-data col-md-12">
+                                <div class="col-sm-6">
+                                    <h3 class="featured-product-price">$ 250</h3>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <a href="#" class="featured-product-cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item clearfix">
+                    <div class="featured-item">
+                        <a href="#">
+                            <img class="featured-product-img" alt="Hang Hot" title="Hang kinh" src="images/Sail_on_Beach_Backpack-254x402.jpg"/>
+                        </a>
+                        
+                        <div class="col-md-12 featured-product-info">
+                            <h3 class="featured-product-title"><a href="#">Product TITLE</a></h3>
+                            <div class="featured-product-data col-md-12">
+                                <div class="col-sm-6">
+                                    <h3 class="featured-product-price">$ 250</h3>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <a href="#" class="featured-product-cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="item clearfix">
+                    <div class="featured-item">
+                        <a href="#">
+                            <img class="featured-product-img" alt="Hang Hot" title="Hang kinh" src="images/Sail_on_Beach_Backpack-254x402.jpg"/>
+                        </a>
+                        
+                        <div class="col-md-12 featured-product-info">
+                            <h3 class="featured-product-title"><a href="#">Product TITLE</a></h3>
+                            <div class="featured-product-data col-md-12">
+                                <div class="col-sm-6">
+                                    <h3 class="featured-product-price">$ 250</h3>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <a href="#" class="featured-product-cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!--END Carousel-->
+        
+        <!--Featured Product-->
+        <div class="featured-product">
+            <h1 class="featured-product-heading">
+                <span>Lastest</span>
+            </h1>
+        </div>
+        
+        
+        <!--Carousel-->
+        <div style="height: 402px!important;">
+            <div class="owl-carousel" style="padding: 0; height:402">
+                <div class="item clearfix">
+                    <div class="featured-item">
+                        <a href="#">
+                            <img class="featured-product-img" alt="Hang Hot" title="Hang kinh" src="images/Lobster_Print_Kitten_Clutch-530x402.jpg"/>
+                        </a>
+                        
+                        <div class="col-md-12 featured-product-info">
+                            <h3 class="featured-product-title"><a href="#">Product TITLE</a></h3>
+                            <div class="featured-product-data col-md-12">
+                                <div class="col-sm-6">
+                                    <h3 class="featured-product-price">$ 250</h3>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <a href="#" class="featured-product-cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item clearfix">
+                    <div class="featured-item">
+                        <a href="#">
+                            <img class="featured-product-img" alt="Hang Hot" title="Hang kinh" src="images/Sail_on_Beach_Backpack-254x402.jpg"/>
+                        </a>
+                        
+                        <div class="col-md-12 featured-product-info">
+                            <h3 class="featured-product-title"><a href="#">Product TITLE</a></h3>
+                            <div class="featured-product-data col-md-12">
+                                <div class="col-sm-6">
+                                    <h3 class="featured-product-price">$ 250</h3>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <a href="#" class="featured-product-cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="on-sale-ribbon">Sale</div>
+                    </div>
+                </div>
+                
+                <div class="item clearfix">
+                    <div class="featured-item">
+                        <a href="#">
+                            <img class="featured-product-img" alt="Hang Hot" title="Hang kinh" src="images/Sail_on_Beach_Backpack-254x402.jpg"/>
+                        </a>
+                        
+                        <div class="col-md-12 featured-product-info">
+                            <h3 class="featured-product-title"><a href="#">Product TITLE</a></h3>
+                            <div class="featured-product-data col-md-12">
+                                <div class="col-sm-6">
+                                    <h3 class="featured-product-price">$ 250</h3>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <a href="#" class="featured-product-cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item clearfix">
+                    <div class="featured-item">
+                        <a href="#">
+                            <img class="featured-product-img" alt="Hang Hot" title="Hang kinh" src="images/Sail_on_Beach_Backpack-254x402.jpg"/>
+                        </a>
+                        
+                        <div class="col-md-12 featured-product-info">
+                            <h3 class="featured-product-title"><a href="#">Product TITLE</a></h3>
+                            <div class="featured-product-data col-md-12">
+                                <div class="col-sm-6">
+                                    <h3 class="featured-product-price">$ 250</h3>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <a href="#" class="featured-product-cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="item clearfix">
+                    <div class="featured-item">
+                        <a href="#">
+                            <img class="featured-product-img" alt="Hang Hot" title="Hang kinh" src="images/Sail_on_Beach_Backpack-254x402.jpg"/>
+                        </a>
+                        
+                        <div class="col-md-12 featured-product-info">
+                            <h3 class="featured-product-title"><a href="#">Product TITLE</a></h3>
+                            <div class="featured-product-data col-md-12">
+                                <div class="col-sm-6">
+                                    <h3 class="featured-product-price">$ 250</h3>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <a href="#" class="featured-product-cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!--END Carousel-->
+        <br /><br /><br /><br />
+    </div>     
+</div>
+<!--End Main Content-->
+
+<!--Start Footer-->
+<footer>
+    <div class="container">
+        Hello
+    </div>
+</footer>
+</body>
+</html>
